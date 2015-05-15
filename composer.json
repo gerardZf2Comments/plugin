@@ -1,6 +1,9 @@
 {
     "name": "gol/plugin",
     "type": "composer-plugin",
+    "extra" : {
+        "class" : "Plugin\\Plugin"
+    },
     "require": {
         "composer-plugin-api": "1.0.0"
     },
