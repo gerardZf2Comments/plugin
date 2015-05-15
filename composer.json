@@ -1,0 +1,13 @@
+{
+    "name": "gol/plugin",
+    "type": "composer-plugin",
+    "require": {
+        "composer-plugin-api": "1.0.0"
+    },
+    "autoload": {
+        "psr-0": {
+            "Plugin": "src/"
+        }
+    }
+
+}
