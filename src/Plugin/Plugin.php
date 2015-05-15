@@ -22,7 +22,7 @@ class Plugin implements PluginInterface, EventSubscriberInterface
     public static function getSubscribedEvents()
     {
         return array(
-            PluginEvents::POST_PACKAGE_INSTALL => array(
+            'post-package-install'  => array(
                 array('plugin', 0)
             ),
         );
