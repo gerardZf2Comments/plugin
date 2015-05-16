@@ -30,7 +30,7 @@ class Plugin implements PluginInterface, EventSubscriberInterface
 
     public function plugin($event)
     {
-        xdebug_break();
-        var_dump($event->getName());
+        file_put_contents('event'.time(), var_dump($event));
+        file_put_contents('this'.time(), var_dump($this));
     }
 }
