@@ -30,14 +30,9 @@ class Plugin implements PluginInterface, EventSubscriberInterface
 
     public function plugin($event)
     {
-        ob_start();
+        
         var_dump('package :: ',$event->getOperation()->getPackage());
         var_dump('target dir :: ',$event->getOperation()->getPackage()->getTargetDir());
-        $eventData = ob_get_clean();
-        ob_start();
-        var_dump($this);
-        $thisData = ob_get_clean();
-        file_put_contents('event'.time(), var_dump($eventData));
-        file_put_contents('this'.time(), var_dump($thisData));
+       
     }
 }
