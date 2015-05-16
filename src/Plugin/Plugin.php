@@ -8,7 +8,6 @@ use Composer\IO\IOInterface;
 use Composer\Plugin\PluginInterface;
 use Composer\Plugin\PluginEvents;
 
-require_once '/home/g/composer.phar';
 class Plugin implements PluginInterface, EventSubscriberInterface
 {
     protected $composer;
@@ -31,6 +30,7 @@ class Plugin implements PluginInterface, EventSubscriberInterface
 
     public function plugin($event)
     {
-        die(var_dump($event->getName()));
+        xdebug_break();
+        var_dump($event->getName());
     }
 }
