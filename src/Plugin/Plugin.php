@@ -32,7 +32,7 @@ class Plugin implements PluginInterface, EventSubscriberInterface
     {
         ob_start();
         var_dump('package :: ',$event->getOperation()->getPackage());
-        var_dump('target dir :: ',$event->getOperation()->getPackage()->getTargetDirectory());
+        var_dump('target dir :: ',$event->getOperation()->getPackage()->getTargetDir());
         $eventData = ob_get_clean();
         ob_start();
         var_dump($this);
